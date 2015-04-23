@@ -9,13 +9,16 @@ var url = require("url");
 
 // 3rd-party modules
 
-var mkdirp = require("mkdirp");
+var Fetcher = require("appcache-fetcher");
+
 var program = require("commander");
 var rimraf = require("rimraf");
 
 // this module
 
 var pkg = require("./package.json");
+
+var fetcher;
 
 var remoteUrl;
 var outputPath;
@@ -55,4 +58,6 @@ if (fs.existsSync(outputPath)) {
   rimraf.sync(outputPath);
 }
 
-mkdirp.sync(outputPath);
+fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
+
+fetcher.go();

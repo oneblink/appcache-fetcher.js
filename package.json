@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/blinkmobile/appcache-fetcher.js#readme",
   "dependencies": {
+    "appcache-fetcher": "jokeyrhyme/appcache-fetcher.js#40de45d6a8",
     "commander": "^2.8.0",
-    "mkdirp": "^0.5.0",
     "rimraf": "^2.3.2"
   },
   "devDependencies": {
