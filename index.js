@@ -5,6 +5,7 @@
 // Node.js built-ins
 
 var fs = require("fs");
+var path = require("path");
 var url = require("url");
 
 // 3rd-party modules
@@ -60,4 +61,12 @@ if (fs.existsSync(outputPath)) {
 
 fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
 
-fetcher.go();
+fetcher.addTransform("html", require("./lib/transforms/html.injectWinJsCompat"));
+
+fetcher.go()
+.then(function () {
+  var input = path.join(__dirname, "vendor", "winstore-jscompat.js");
+  var output = path.join(outputPath, "winstore-jscompat.js");
+  fs.createReadStream(input)
+  .pipe(fs.createWriteStream(output));
+});
