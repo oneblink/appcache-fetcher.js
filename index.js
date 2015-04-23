@@ -62,6 +62,7 @@ if (fs.existsSync(outputPath)) {
 fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
 
 fetcher.addTransform("html", require("./lib/transforms/html.injectWinJsCompat"));
+fetcher.addTransform("html", require("./lib/transforms/html.injectWinJs"));
 
 fetcher.go()
 .then(function () {
