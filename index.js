@@ -64,6 +64,7 @@ fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
 fetcher.addExtractor("manifestUrl", require("./lib/extractors/manifestUrl.dataAttribute"));
 
 // these are in REVERSE order because they insert before the first SCRIPT
+fetcher.addTransform("html", require("./lib/transforms/html.injectBlinkGap"));
 fetcher.addTransform("html", require("./lib/transforms/html.injectCordova"));
 fetcher.addTransform("html", require("./lib/transforms/html.injectWinJsCompat"));
 fetcher.addTransform("html", require("./lib/transforms/html.injectWinJs"));
