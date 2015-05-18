@@ -19,3 +19,5 @@ Options:
 ```shell
 node path/to/appcache-fetcher.js/ http://devdocs.io/ ~/Desktop/output
 ```
+
+See the [Cordova how-to guide](docs/howto-cordova.md) for more specific examples.
