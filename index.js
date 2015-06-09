@@ -17,7 +17,7 @@ var rimraf = require('rimraf');
 
 // this module
 
-var pkg = require('./package.json');
+var pkg = require(path.join(__dirname, 'package.json'));
 
 var fetcher;
 
@@ -61,13 +61,13 @@ if (fs.existsSync(outputPath)) {
 
 fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
 
-fetcher.addExtractor('manifestUrl', require('./lib/extractors/manifestUrl.dataAttribute'));
+fetcher.addExtractor('manifestUrl', require(path.join(__dirname, 'lib', 'extractors', 'manifestUrl.dataAttribute')));
 
 // these are in REVERSE order because they insert before the first SCRIPT
-fetcher.addTransform('html', require('./lib/transforms/html.injectBlinkGap'));
-fetcher.addTransform('html', require('./lib/transforms/html.injectCordova'));
-fetcher.addTransform('html', require('./lib/transforms/html.injectWinJsCompat'));
-fetcher.addTransform('html', require('./lib/transforms/html.injectWinJs'));
+fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectBlinkGap')));
+fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectCordova')));
+fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectWinJsCompat')));
+fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectWinJs')));
 
 fetcher.go()
 .then(function () {
