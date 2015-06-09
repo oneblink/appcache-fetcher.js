@@ -10,7 +10,7 @@ var url = require('url');
 
 // 3rd-party modules
 
-var Fetcher = require('@jokeyrhyme/appcache-fetcher');
+var Fetcher = require(path.join(__dirname, 'lib', 'fetcher'));
 
 var program = require('commander');
 var rimraf = require('rimraf');
@@ -60,14 +60,6 @@ if (fs.existsSync(outputPath)) {
 }
 
 fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
-
-fetcher.addExtractor('manifestUrl', require(path.join(__dirname, 'lib', 'extractors', 'manifestUrl.dataAttribute')));
-
-// these are in REVERSE order because they insert before the first SCRIPT
-fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectBlinkGap')));
-fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectCordova')));
-fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectWinJsCompat')));
-fetcher.addTransform('html', require(path.join(__dirname, 'lib', 'transforms', 'html.injectWinJs')));
 
 fetcher.go()
 .then(function () {
