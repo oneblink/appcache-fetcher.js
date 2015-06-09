@@ -1,5 +1,6 @@
 # 3rd-party files
 node_modules
+vendor
 
 # output files
 coverage
