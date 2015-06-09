@@ -10,7 +10,7 @@ var url = require('url');
 
 // 3rd-party modules
 
-var Fetcher = require('appcache-fetcher');
+var Fetcher = require('@jokeyrhyme/appcache-fetcher');
 
 var program = require('commander');
 var rimraf = require('rimraf');

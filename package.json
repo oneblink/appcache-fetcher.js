@@ -1,5 +1,5 @@
 {
-  "name": "blinkmobile-appcache-fetcher",
+  "name": "@blinkmobile/appcache-fetcher",
   "version": "0.0.1",
   "description": "BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.js",
   "main": "index.js",
@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/blinkmobile/appcache-fetcher.js#readme",
   "dependencies": {
-    "appcache-fetcher": "jokeyrhyme/appcache-fetcher.js#8b2f7703ff5",
-    "cheerio": "^0.19.0",
-    "commander": "^2.8.0",
-    "rimraf": "^2.3.2"
+    "@jokeyrhyme/appcache-fetcher": "1.0.0",
+    "cheerio": "0.19.0",
+    "commander": "2.8.0",
+    "rimraf": "2.4.0"
   },
   "devDependencies": {
-    "eslint": "^0.19.0"
+    "eslint": "^0.22"
   }
 }
