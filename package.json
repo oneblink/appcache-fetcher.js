@@ -4,7 +4,7 @@
   "description": "BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.js",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ."
+    "test": "eslint . && istanbul cover ./tests/"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,16 @@
   },
   "homepage": "https://github.com/blinkmobile/appcache-fetcher.js#readme",
   "dependencies": {
-    "@jokeyrhyme/appcache-fetcher": "1.0.0",
+    "@jokeyrhyme/appcache-fetcher": "1.0.2",
     "cheerio": "0.19.0",
-    "commander": "2.8.0",
+    "commander": "2.8.1",
     "rimraf": "2.4.0"
   },
   "devDependencies": {
-    "eslint": "^0.22"
+    "@jokeyrhyme/appcache": "^1.0",
+    "eslint": "^0.22",
+    "istanbul": "^0.3",
+    "tape": "^4.0",
+    "tape-chai": "^1.1"
   }
 }
