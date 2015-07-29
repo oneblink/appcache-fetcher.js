@@ -9,7 +9,7 @@ var path = require('path');
 // 3rd-party modules
 
 var AppCache = require('@jokeyrhyme/appcache');
-
+var cheerio = require('cheerio');
 var rimraf = require('rimraf');
 var test = require('tape');
 
@@ -102,6 +102,31 @@ test(REMOTE_URL, function (t) {
     }, function (err) {
       console.log(err);
       tt.error(err);
+    });
+  });
+
+  t.test('#readFile() index.html has injected scripts in order', function (tt) {
+    fetcher.readFile(path.join(OUTPUT_PATH, 'index.html'))
+    .then(function (html) {
+      var $;
+      tt.ok(html);
+      tt.isString(html);
+      $ = cheerio.load(html);
+      tt.deepEqual($('head > script').map(function () {
+        return $(this).attr('src');
+      }).get(), [
+        'appCacheIndex.js',
+        '//Microsoft.Phone.WinJS.2.1/js/base.js',
+        '//Microsoft.Phone.WinJS.2.1/js/ui.js',
+        '//Microsoft.WinJS.2.1/js/base.js',
+        '//Microsoft.WinJS.2.1/js/ui.js',
+        'winstore-jscompat.js',
+        'cordova.js'
+      ]);
+      tt.end();
+    }, function (err) {
+      tt.error(err);
+      tt.end();
     });
   });
 
