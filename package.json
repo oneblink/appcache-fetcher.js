@@ -17,16 +17,16 @@
   },
   "homepage": "https://github.com/blinkmobile/appcache-fetcher.js#readme",
   "dependencies": {
-    "@jokeyrhyme/appcache-fetcher": "1.1.0",
+    "@jokeyrhyme/appcache-fetcher": "1.2.0",
     "cheerio": "0.19.0",
     "commander": "2.8.1",
-    "rimraf": "2.4.1"
+    "rimraf": "2.4.2"
   },
   "devDependencies": {
     "@jokeyrhyme/appcache": "^1.0",
-    "eslint": "^0.24",
-    "eslint-config-semistandard": "^4.0",
-    "eslint-config-standard": "^3.1",
+    "eslint": "^1.1",
+    "eslint-config-semistandard": "^5.0",
+    "eslint-config-standard": "^4.0",
     "istanbul": "^0.3",
     "tape": "^4.0",
     "tape-chai": "^1.1"

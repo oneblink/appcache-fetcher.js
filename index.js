@@ -1,4 +1,5 @@
 /*eslint-disable no-process-exit, no-sync*/ // this is a CLI tool
+/* eslint-disable no-console */ // this is a CLI tool
 
 'use strict';
 

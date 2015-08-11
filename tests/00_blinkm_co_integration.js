@@ -1,4 +1,5 @@
-/*eslint-disable no-sync*/ // tests can be synchronous, relax!
+/* eslint-disable no-sync */ // tests can be synchronous, relax!
+/* eslint-disable no-console */ // just a test, relax!
 
 'use strict';
 
