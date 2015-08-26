@@ -13,9 +13,6 @@ priority platforms. Your feedback is greatly appreciated.
 
 - basic familiarity with command line interfaces and directory navigation
 
-- Windows app development requires [VisualStudio](http://visualstudio.com/)
-  Express 2013 or Community 2015 or better
-
 
 ## 1. Build a standard Cordova project
 
