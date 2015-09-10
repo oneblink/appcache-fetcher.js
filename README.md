@@ -2,6 +2,8 @@
 
 BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.js
 
+[![travis-ci](https://img.shields.io/travis/blinkmobile/appcache-fetcher.js.svg)](https://travis-ci.org/blinkmobile/appcache-fetcher.js)
+
 ## usage
 
 ```
