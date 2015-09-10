@@ -44,7 +44,7 @@ test(REMOTE_URL, function (t) {
     })
     .then(function () {
       tt.ok(true);
-    }, function (err) {
+    }).catch(function (err) {
       tt.error(err);
     });
   });
@@ -56,7 +56,7 @@ test(REMOTE_URL, function (t) {
       tt.ok(manifestUrl);
       tt.isString(manifestUrl);
       tt.end();
-    }, function (err) {
+    }).catch(function (err) {
       tt.error(err);
       tt.end();
     });
@@ -69,7 +69,7 @@ test(REMOTE_URL, function (t) {
     fetcher.download(manifestUrl, OUTPUT_PATH)
     .then(function () {
       tt.ok(true);
-    }, function (err) {
+    }).catch(function (err) {
       tt.error(err);
     });
   });
@@ -81,7 +81,7 @@ test(REMOTE_URL, function (t) {
       tt.ok(contents);
       tt.isString(contents);
       tt.end();
-    }, function (err) {
+    }).catch(function (err) {
       tt.error(err);
       tt.end();
     });
@@ -100,7 +100,7 @@ test(REMOTE_URL, function (t) {
     fetcher.go()
     .then(function () {
       tt.ok(true);
-    }, function (err) {
+    }).catch(function (err) {
       console.log(err);
       tt.error(err);
     });
@@ -114,7 +114,9 @@ test(REMOTE_URL, function (t) {
       tt.isString(html);
       $ = cheerio.load(html);
       tt.deepEqual($('head > script').map(function () {
+        /* eslint-disable no-invalid-this */ // `this` is defined by cheerio
         return $(this).attr('src');
+        /* eslint-enable no-invalid-this */
       }).get(), [
         'appCacheIndex.js',
         '//Microsoft.Phone.WinJS.2.1/js/base.js',
@@ -125,7 +127,7 @@ test(REMOTE_URL, function (t) {
         'cordova.js'
       ]);
       tt.end();
-    }, function (err) {
+    }).catch(function (err) {
       tt.error(err);
       tt.end();
     });
