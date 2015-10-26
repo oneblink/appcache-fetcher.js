@@ -20,6 +20,18 @@ You may use Visual Studio to add SDKs (e.g. Bing Maps) to the desired Projects:
 
 - Solution Explorer -> right-click on the Project -> Add -> Reference...
 
+## Setting the target version of windows
+
+To target Windows 10 you will need to put `<preference name="windows-target-version" value="10.0" />` in your `config.xml` file.
+It is possible to target both Windows 8.1 and Windows 10 in the same `config.xml` file:
+
+
+    <preference name="windows-target-version" value="8.1" />
+    <preference name="windows-target-version" value="10.0" />
+
+
+See the Cordova for Windows 10 [platform guide](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/win8/win10-support.html) for more details
+
 
 ## Enterprise Distribution (Side-Loading)
 
@@ -51,3 +63,16 @@ Side-loading in Windows 8.x is available when:
 - the local user logged in using an Active Directory account
 
 Side-loading in Windows 10 is a Developer option in the Settings app.
+
+
+## Known Issues and solutions/work arounds
+
+### `history.back()` or `history.go(-1)` can crash the cordova app
+
+If you have targeted Windows 8.1 in `config.xml` and are running the app on a Windows 10 machine,
+using `history.back()` can be problematic. When your applications `history.length` is greater 
+than 0, calling `history.back()` or `history.go(-1)` so that the current index should become -1 will cause 
+the app to crash, and removing all event listeners from all DOM nodes.
+
+The only fix is to make a build of your app that targets Windows 10, and use that on Windows 10 devices.
+See the section above for details on how to target different windows architectures.
