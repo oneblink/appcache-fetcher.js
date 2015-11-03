@@ -26,8 +26,15 @@ To target Windows 10 you will need to put `<preference name="windows-target-vers
 It is possible to target both Windows 8.1 and Windows 10 in the same `config.xml` file:
 
 
-    <preference name="windows-target-version" value="8.1" />
-    <preference name="windows-target-version" value="10.0" />
+    <platform name="windows">
+      <preference name="windows-target-version" value="8.1" />
+    </platform>
+
+or
+
+    <platform name="windows">
+      <preference name="windows-target-version" value="10.0" />
+    </platform>
 
 
 See the Cordova for Windows 10 [platform guide](http://cordova.apache.org/docs/en/5.1.1/guide/platforms/win8/win10-support.html) for more details
