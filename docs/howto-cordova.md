@@ -11,14 +11,14 @@ priority platforms. Your feedback is greatly appreciated.
 
 - NPM 3.0.x or newer (Node.js 5.x includes this)
 
-- latest [Cordova CLI](http://cordova.apache.org/docs/en/5.0.0/guide_cli_index.md.html)
+- latest [Cordova CLI](http://cordova.apache.org/docs/en/5.1.1/guide/cli/index.html#link-2)
 
 - basic familiarity with command line interfaces and directory navigation
 
 
 ## 1. Build a standard Cordova project
 
-Follow the [upstream Cordova CLI instructions](http://cordova.apache.org/docs/en/5.0.0/guide_cli_index.md.html).
+Follow the [upstream Cordova CLI instructions](http://cordova.apache.org/docs/en/5.1.1/guide/cli/index.html#link-3).
 
 For example (substituting the paths and names):
 
@@ -40,11 +40,9 @@ cordova emulate windows
 Once you've confirmed that you can build a standard Cordova project, you may
 begin customising for your particular solution.
 
-See the following upstream documents:
+See the following upstream document:
 
-- http://cordova.apache.org/docs/en/5.0.0/config_ref_index.md.html
-
-- http://cordova.apache.org/docs/en/5.0.0/config_ref_images.md.html
+- http://cordova.apache.org/docs/en/5.1.1/config_ref/images.html
 
 Perform a build for your desired target platforms to confirm that these
 customisations have not broken anything.
