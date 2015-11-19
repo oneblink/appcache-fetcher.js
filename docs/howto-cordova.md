@@ -9,6 +9,8 @@ priority platforms. Your feedback is greatly appreciated.
 
 - [Node.js](https://nodejs.org/) 0.12.x or newer
 
+- NPM 3.0.x or newer (Node.js 5.x includes this)
+
 - latest [Cordova CLI](http://cordova.apache.org/docs/en/5.0.0/guide_cli_index.md.html)
 
 - basic familiarity with command line interfaces and directory navigation
