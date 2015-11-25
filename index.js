@@ -33,6 +33,7 @@ program
   outputPath = output;
 })
 .option('-f, --force', 'wipe `output\' if it already exists, create if needed')
+.option('-s, --strict', 'consider fetch errors as fatal')
 .parse(process.argv);
 
 (function () {
@@ -60,7 +61,11 @@ if (fs.existsSync(outputPath)) {
   rimraf.sync(outputPath);
 }
 
-fetcher = new Fetcher({ remoteUrl: remoteUrl, localPath: outputPath });
+fetcher = new Fetcher({
+  localPath: outputPath,
+  remoteUrl: remoteUrl,
+  strictMode: !!program.strict
+});
 
 fetcher.go()
 .then(function () {

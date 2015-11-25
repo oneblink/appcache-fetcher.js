@@ -14,6 +14,7 @@ Options:
   -h, --help     output usage information
   -V, --version  output the version number
   -f, --force    wipe `output' if it already exists, create if needed
+  -s, --strict   consider fetch errors as fatal
 ```
 
 ### example
