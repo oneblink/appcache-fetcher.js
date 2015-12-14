@@ -5,10 +5,18 @@ BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.
 [![npm module](https://img.shields.io/npm/v/@blinkmobile/appcache-fetcher.svg)](https://www.npmjs.com/package/@blinkmobile/appcache-fetcher)
 [![travis-ci](https://img.shields.io/travis/blinkmobile/appcache-fetcher.js.svg)](https://travis-ci.org/blinkmobile/appcache-fetcher.js)
 
-## usage
+
+## Installation
+
+```sh
+npm install -g @blinkmobile/cli @blinkmobile/appcache-fetcher
+```
+
+
+## Usage
 
 ```
-Usage: appcache-fetcher [options] <url> <output>
+Usage: blinkm acf [options] <url> <output>
 
 Options:
 
@@ -18,7 +26,8 @@ Options:
   -s, --strict   consider fetch errors as fatal
 ```
 
-### example
+
+### Example
 
 ```shell
 node path/to/appcache-fetcher.js/ http://devdocs.io/ ~/Desktop/output
