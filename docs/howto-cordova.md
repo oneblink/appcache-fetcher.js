@@ -13,6 +13,10 @@ priority platforms. Your feedback is greatly appreciated.
 
 - latest [Cordova CLI](http://cordova.apache.org/docs/en/5.1.1/guide/cli/index.html#link-2)
 
+- our CLI: https://github.com/blinkmobile/cli
+
+- the CLI for this tool: https://github.com/blinkmobile/appcache-fetcher.js
+
 - basic familiarity with command line interfaces and directory navigation
 
 
@@ -99,7 +103,7 @@ You will need to remove or rename the `www` directory in your Cordova project.
 Then, execute the following (substituting the real paths and addresses):
 
 ```shell
-node path/to/this/tool https://your.offline.web.app/ path/to/your/project/www
+bm acf https://your.offline.web.app/ path/to/your/project/www
 ```
 
 This will re-create the `www` directory in your Cordova project, using assets
