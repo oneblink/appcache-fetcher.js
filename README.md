@@ -30,7 +30,7 @@ Options:
 ### Example
 
 ```shell
-node path/to/appcache-fetcher.js/ http://devdocs.io/ ~/Desktop/output
+bm acf https://your.offline.web.app/ path/to/your/project/www
 ```
 
 See the [Cordova how-to guide](docs/howto-cordova.md) for more specific examples.
