@@ -83,20 +83,7 @@ Perform a build for your desired target platforms to confirm that these plugins
 have not broken anything.
 
 
-## 4. Download and prepare this tool
-
-You will need a copy of this tool on your local machine. You can download
-this from its [GitHub project page](https://github.com/blinkmobile/appcache-fetcher.js).
-
-Once you've downloaded this tool and unpacked it (if necessary), prepare it
-for use by executing the following (substituting the real path):
-
-```shell
-cd path/to/this/tool
-npm install
-```
-
-## 5. Use this tool to download your offline-capable web app for Cordova
+## 4. Use this tool to download your offline-capable web app for Cordova
 
 You will need to remove or rename the `www` directory in your Cordova project.
 
@@ -113,7 +100,7 @@ Perform a build for your desired target platforms to confirm that the new `www`
 assets execute as expected.
 
 
-## 6. (optional) Version your changes
+## 5. (optional) Version your changes
 
 If you are using a version control system, you should version / commit the
 following files:
