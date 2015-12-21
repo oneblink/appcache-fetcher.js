@@ -32,10 +32,16 @@ cordova create project-name project.bundle.id
 
 cd path/to/your/project
 
-cordova platform add windows
+cordova platform --save add windows
 
 cordova build windows
 cordova emulate windows
+```
+
+You can also install specific versions of the platform-specific Cordova library:
+
+```shell
+cordova platform --save add android@4.1.1
 ```
 
 
@@ -62,22 +68,31 @@ cordova emulate windows
 
 ## 3. (optional) Install extra Cordova plugins
 
-You may find available Cordova plugins by searching [NPM](https://www.npmjs.com/). Search for `cordova-plugin-`.
+You may find available Cordova plugins by searching the [Cordova portal](http://cordova.apache.org/plugins/).
 
-You may install these plugins using [NPM CLI](https://docs.npmjs.com/cli/install) which is often bundled with Node.js.
+You may install these plugins using the [Cordova CLI](http://cordova.apache.org/docs/en/latest/guide/cli/index.html#link-7).
 
 For example:
 
 ```shell
 cd path/to/your/project
 
-npm install --save cordova-plugin-camera
-npm install --save cordova-plugin-console
-npm install --save cordova-plugin-contacts
-npm install --save cordova-plugin-file-transfer
-npm install --save cordova-plugin-inappbrowser
-npm install --save cordova-plugin-media-capture
+cordova plugin add --save cordova-plugin-camera
+cordova plugin add --save cordova-plugin-console
+cordova plugin add --save cordova-plugin-contacts
+cordova plugin add --save cordova-plugin-file-transfer
+cordova plugin add --save cordova-plugin-inappbrowser
+cordova plugin add --save cordova-plugin-media-capture
 ```
+
+You can also install specific versions of plugins:
+
+```shell
+cd path/to/your/project
+
+cordova plugin add --save cordova-plugin-camera@1.0.0
+```
+
 
 Perform a build for your desired target platforms to confirm that these plugins
 have not broken anything.
