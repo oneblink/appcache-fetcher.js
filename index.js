@@ -9,21 +9,26 @@ var fs = require('fs');
 var path = require('path');
 var url = require('url');
 
-// 3rd-party modules
+// foreign modules
 
 var Fetcher = require(path.join(__dirname, 'lib', 'fetcher'));
 
 var program = require('commander');
 var rimraf = require('rimraf');
+var updateNotifier = require('update-notifier');
 
-// this module
+// local modules
 
 var pkg = require(path.join(__dirname, 'package.json'));
+
+// this module
 
 var fetcher;
 
 var remoteUrl;
 var outputPath;
+
+updateNotifier({ pkg }).notify();
 
 program
 .version(pkg.version)
