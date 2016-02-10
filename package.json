@@ -1,6 +1,6 @@
 {
   "name": "@blinkmobile/appcache-fetcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.js",
   "main": "index.js",
   "files": [
