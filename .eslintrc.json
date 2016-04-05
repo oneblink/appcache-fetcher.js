@@ -1,10 +1,13 @@
 {
-  "extends": ["@jokeyrhyme/es5"],
+  "extends": ["eslint:recommended", "semistandard"],
   "env": {
     "amd": true,
     "browser": false,
     "mocha": false,
     "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 5
   },
   "rules": {
     /* Node.JS */
