@@ -1,30 +1,13 @@
 {
   "name": "@blinkmobile/appcache-fetcher",
-  "version": "1.0.2",
   "description": "BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.js",
-  "main": "index.js",
-  "files": [
-    "bin",
-    "lib",
-    "vendor",
-    "index.js"
-  ],
+  "version": "1.0.2",
   "bin": {
     "blinkm-acf": "bin/index.js"
   },
-  "scripts": {
-    "test": "eslint . && istanbul cover ./tests/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/blinkmobile/appcache-fetcher.js.git"
-  },
-  "author": "",
-  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/blinkmobile/appcache-fetcher.js/issues"
   },
-  "homepage": "https://github.com/blinkmobile/appcache-fetcher.js#readme",
   "dependencies": {
     "@jokeyrhyme/appcache-fetcher": "1.3.2",
     "cheerio": "0.20.0",
@@ -39,12 +22,40 @@
     "eslint-config-standard": "^5.1",
     "eslint-plugin-promise": "^1.1",
     "eslint-plugin-standard": "^1.3",
+    "fixpack": "^2.3.1",
     "istanbul": "^0.4",
     "tape": "^4.0",
     "tape-chai": "^1.1"
   },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
   "engines": {
     "node": ">=4.0",
     "npm": ">=3.0"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "vendor",
+    "index.js"
+  ],
+  "homepage": "https://github.com/blinkmobile/appcache-fetcher.js#readme",
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blinkmobile/appcache-fetcher.js.git"
+  },
+  "scripts": {
+    "eslint": "eslint --fix --cache .",
+    "fixpack": "fixpack",
+    "posttest": "npm run eslint && npm run fixpack",
+    "test": "istanbul cover ./tests/"
   }
 }

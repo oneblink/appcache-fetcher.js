@@ -1,9 +1,6 @@
-# appcache-fetcher.js
+# appcache-fetcher.js [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/github/blinkmobile/appcache-fetcher.js?branch=master&svg=true)](https://ci.appveyor.com/project/blinkmobile/appcache-fetcher.js) [![Travis CI Status](https://travis-ci.org/blinkmobile/appcache-fetcher.js.svg?branch=master)](https://travis-ci.org/blinkmobile/appcache-fetcher.js)
 
 BlinkMobile-specific wrapper for https://github.com/jokeyrhyme/appcache-fetcher.js
-
-[![npm module](https://img.shields.io/npm/v/@blinkmobile/appcache-fetcher.svg)](https://www.npmjs.com/package/@blinkmobile/appcache-fetcher)
-[![travis-ci](https://img.shields.io/travis/blinkmobile/appcache-fetcher.js.svg)](https://travis-ci.org/blinkmobile/appcache-fetcher.js)
 
 
 ## Installation
