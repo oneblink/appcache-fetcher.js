@@ -1,6 +1,18 @@
 # Change Log
 
 
+## 2.0.0 - 2016-06-16
+
+
+### Changed
+
+- officially drop support for anything older than Node.js 4
+
+- ACF-11: use upstream [jokeyrhyme/appcache-fetcher 2.0.0](https://github.com/jokeyrhyme/appcache-fetcher.js/releases/tag/2.0.0) (@jokeyrhyme)
+
+- ACF-11: run CSS transforms on styles within HTML
+
+
 ## 1.0.2 - 2016-04-06
 
 

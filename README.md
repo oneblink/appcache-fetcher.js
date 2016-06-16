@@ -31,3 +31,8 @@ bm acf https://your.offline.web.app/ path/to/your/project/www
 ```
 
 See the [Cordova how-to guide](docs/howto-cordova.md) for more specific examples.
+
+
+## Compatibility
+
+- versions >=2.x require Node.js >=4.x
