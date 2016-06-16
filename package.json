@@ -9,10 +9,11 @@
     "url": "https://github.com/blinkmobile/appcache-fetcher.js/issues"
   },
   "dependencies": {
-    "@jokeyrhyme/appcache-fetcher": "1.3.2",
+    "@jokeyrhyme/appcache-fetcher": "2.0.0",
     "cheerio": "0.20.0",
     "commander": "2.9.0",
     "rimraf": "2.5.2",
+    "through2": "2.0.1",
     "update-notifier": "^1.0.0"
   },
   "devDependencies": {
