@@ -23,6 +23,13 @@ var Fetcher = require(path.join(__dirname, '..', 'lib', 'fetcher'));
 var OUTPUT_PATH = path.join(__dirname, '..', 'output');
 var REMOTE_URL = 'https://blinkm.co/integration';
 
+function errorThenEnd (tt) {
+  return function (err) {
+    tt.error(err);
+    tt.end();
+  };
+}
+
 test(REMOTE_URL, function (t) {
   var fetcher;
   var manifestUrl;
@@ -56,10 +63,7 @@ test(REMOTE_URL, function (t) {
       tt.ok(manifestUrl);
       tt.isString(manifestUrl);
       tt.end();
-    }).catch(function (err) {
-      tt.error(err);
-      tt.end();
-    });
+    }).catch(errorThenEnd(tt));
   });
 
   t.test('#download() AppCache Manifest', function (tt) {
@@ -81,10 +85,7 @@ test(REMOTE_URL, function (t) {
       tt.ok(contents);
       tt.isString(contents);
       tt.end();
-    }).catch(function (err) {
-      tt.error(err);
-      tt.end();
-    });
+    }).catch(errorThenEnd(tt));
   });
 
   t.test('AppCache.parse() AppCache Manifest', function (tt) {
@@ -127,10 +128,7 @@ test(REMOTE_URL, function (t) {
         'cordova.js'
       ]);
       tt.end();
-    }).catch(function (err) {
-      tt.error(err);
-      tt.end();
-    });
+    }).catch(errorThenEnd(tt));
   });
 
   t.end();
