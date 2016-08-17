@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.1 - 2016-08-17
+
+- ACF-12: Revert Browserify version (@simonmarklar)
 
 ## 2.0.0 - 2016-06-16
 
