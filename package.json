@@ -10,17 +10,17 @@
   },
   "dependencies": {
     "@jokeyrhyme/appcache-fetcher": "2.0.1",
-    "cheerio": "0.20.0",
+    "cheerio": "0.22.0",
     "commander": "2.9.0",
     "rimraf": "2.5.4",
     "through2": "2.0.1",
-    "update-notifier": "1.0.0"
+    "update-notifier": "1.0.2"
   },
   "devDependencies": {
     "@jokeyrhyme/appcache": "^1.0",
     "ava": "^0.16.0",
     "eslint": "^3.2.2",
-    "eslint-config-standard": "^5.3.5",
+    "eslint-config-standard": "^6.1.0",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
     "fixpack": "^2.3.1",
